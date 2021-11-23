@@ -21,12 +21,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"pushkit-go-sample/push/authention"
-	"pushkit-go-sample/push/config"
+	auth "pushkit_server/push/authention"
+	"pushkit_server/push/config"
 	"reflect"
 
-	"pushkit-go-sample/httpclient"
-	"pushkit-go-sample/push/constant"
+	"pushkit_server/httpclient"
+	"pushkit_server/push/constant"
 )
 
 type HttpPushClient struct {

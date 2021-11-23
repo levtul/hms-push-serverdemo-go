@@ -19,8 +19,8 @@ package verify
 import (
 	"errors"
 
-	"pushkit-go-sample/push/constant"
-	"pushkit-go-sample/push/model"
+	"pushkit_server/push/constant"
+	"pushkit_server/push/model"
 )
 
 func validateAndroidConfig(androidConfig *model.AndroidConfig) error {
@@ -108,7 +108,7 @@ func validateAndroidNotifyPriority(notification *model.AndroidNotification) erro
 	if notification.Importance != "" &&
 		notification.Importance != constant.NotificationPriorityHigh &&
 		notification.Importance != constant.NotificationPriorityDefault &&
-		notification.Importance != constant.NotificationPriorityLow  {
+		notification.Importance != constant.NotificationPriorityLow {
 		return errors.New("Importance must be 'HIGH', 'NORMAL' or 'LOW'")
 	}
 	return nil

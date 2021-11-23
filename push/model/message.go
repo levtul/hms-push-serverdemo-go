@@ -17,7 +17,7 @@ Copyright 2020. Huawei Technologies Co., Ltd. All rights reserved.
 package model
 
 import (
-	"pushkit-go-sample/push/constant"
+	"pushkit_server/push/constant"
 )
 
 type MessageRequest struct {
@@ -124,9 +124,9 @@ func getDefaultApnsPayload() map[string]interface{} {
 	payLoad := make(map[string]interface{}, 0)
 	aps := &Aps{
 		Alert: &AlertDictionary{
-			Title: "title",
-			Body:  "apns body",
-			TitleLocKey : "PLAY",
+			Title:       "title",
+			Body:        "apns body",
+			TitleLocKey: "PLAY",
 		},
 		Badge: 5,
 	}
